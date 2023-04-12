@@ -16,7 +16,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
       <div>
         <Image src={avatar} alt={tag} className="avatar" />
         <Title>{username}</Title>
-        <Tag>{tag}</Tag>
+        <Tag>@{tag}</Tag>
         <Tag>{location}</Tag>
       </div>
 
@@ -47,7 +47,7 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default Profile;
